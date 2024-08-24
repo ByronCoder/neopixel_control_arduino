@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <alertpattern.h>
+#include <blue.h>
 #include <Adafruit_NeoPixel.h>
 
 AlertPattern::AlertPattern(Adafruit_NeoPixel strip, int num_pixels, int pin)
@@ -9,7 +9,7 @@ AlertPattern::AlertPattern(Adafruit_NeoPixel strip, int num_pixels, int pin)
     _pin = pin;
 }
 
-void AlertPattern::start()
+void blue::start()
 {
     while (true)
     {
@@ -18,13 +18,11 @@ void AlertPattern::start()
             break;
         }
 
-        // colorWipe(_strip.Color(255, 0, 255), 50); // Pink
-
-        colorWipe(_strip.Color(255, 255, 0), 50); // Yellow
+        colorWipe(_strip.Color(0, 0, 255), 255); // Blue
     }
 }
 
-void AlertPattern::colorWipe(uint32_t c, uint8_t wait)
+void blue::colorWipe(uint32_t c, uint8_t wait)
 {
     for (uint16_t i = 0; i < _strip.numPixels(); i++)
     {

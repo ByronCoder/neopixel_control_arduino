@@ -4,6 +4,9 @@
 #include <julypattern.h>
 #include <xmaspattern.h>
 #include <alertpattern.h>
+#include <blue.h>
+#include <red.h>
+#include <pink.h>
 #define PIN 6
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(90, PIN, NEO_GRB + NEO_KHZ800);
@@ -12,8 +15,11 @@ JulyPattern jp(strip, 90, PIN);
 FallPattern fp(strip, 90, PIN);
 XmasPattern cp(strip, 90, PIN);
 AlertPattern ap(strip, 90, PIN);
+blue bl(strip, 90, PIN);
+red re(strip, 90, PIN);
+pink pi(strip, 90, PIN);
 
-void setup()
+void setup()                                                                                                                                                                          
 {
   strip.begin();
   strip.setBrightness(255);
@@ -41,6 +47,12 @@ void loop()
       cp.start();
     case 'a':
       ap.start();
+    case 'p':
+      pi.start();
+    case 'b':
+      bl.start();
+    case 'r':
+      re.start();
     case 'z':
       strip.clear();
       strip.show();
