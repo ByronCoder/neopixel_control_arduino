@@ -1,0 +1,1 @@
+# Patterns package for CircuitPython NeoPixel control 

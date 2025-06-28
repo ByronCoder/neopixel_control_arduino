@@ -1,0 +1,20 @@
+# CircuitPython NeoPixel Control Requirements with Adafruit.IO
+# Core libraries (included with CircuitPython):
+# - board
+# - neopixel  
+# - time
+# - random
+# - supervisor
+# - wifi
+# - socketpool
+# - ssl
+# - json
+
+# Additional libraries needed (install via CircuitPython library bundle):
+# - adafruit_requests
+
+# Installation instructions:
+# 1. Download CircuitPython library bundle from:
+#    https://circuitpython.org/libraries
+# 2. Copy adafruit_requests folder to /lib/ directory on CIRCUITPY drive
+# 3. Or install via pip: pip install adafruit-requests 
